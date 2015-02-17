@@ -1,0 +1,56 @@
+{
+    "name": "__MSG_appName__",
+    "permissions": [
+        "storage"
+    ],
+    "version": "0.0.2",
+    "manifest_version": 2,
+    "description": "__MSG_appDescription__",
+    "icons": {
+        "16": "images/icon-16.png",
+        "128": "images/icon-128.png"
+    },
+    "default_locale": "en",
+    "background": {
+        "scripts": [
+            "scripts/build/chromereload.js",
+            "scripts/build/background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon-19.png",
+            "38": "images/icon-38.png"
+        },
+        "default_title": "inc reading chrome",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "css": [
+                "styles/main.css"
+            ],
+            "js": [
+                "bower_components/jquery/dist/jquery.min.js",
+                "bower_components/react/react-with-addons.js",
+                "bower_components/ramda/dist/ramda.min.js",
+                "bower_components/rangy-1.3/rangy-core.js",
+                "bower_components/rangy-1.3/rangy-cssclassapplier.js",
+                "bower_components/rangy-1.3/rangy-highlighter.js",
+                "bower_components/rangy-1.3/rangy-serializer.js",
+                "bower_components/rangy-1.3/rangy-textrange.js",
+                "bower_components/rangyinputs/rangyinputs-jquery.js",
+                "bower_components/mousetrap/mousetrap.min.js",
+                "scripts/build/contentscript.js",
+                "scripts/build/plainreact.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ],
+    "web_accessible_resources": []
+}

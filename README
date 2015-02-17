@@ -1,0 +1,5 @@
+### Development
+Run in app/scripts: 
+jsx --strip-types --harmony ---watch src build
+
+In root, run 'grunt debug'

@@ -1,0 +1,10 @@
+{
+  "name": "inc-reading-chrome",
+  "version": "0.0.0",
+  "dependencies": {
+    "react": "~0.12.2",
+    "mousetrap": "~1.4.6",
+    "rangyinputs": "~1.2.0"
+  },
+  "devDependencies": {}
+}
