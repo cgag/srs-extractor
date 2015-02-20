@@ -85,7 +85,7 @@ var SRSBox = React.createClass({
   saveCard(card: Card): void {
     var currCard = this.state.currentCard
     if(!isBlank(currCard.text)) {
-      storeState(A.update(this.state,  
+      this.storeState(A.update(this.state,  
                             { savedCards:  {$unshift: [currCard]}
                             , currentCard: {$set: defaultCard}}))
     }
